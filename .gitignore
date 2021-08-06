@@ -1,0 +1,6 @@
+
+*.csv
+whz/LABDATA/wiki_ts_200M_uint64/wiki_ts_200M_uint64
+whz/LABDATA/osm_cellids_200M_uint64/osm_cellids_200M_uint64
+whz/LABDATA/fb_200M_uint32/fb_200M_uint32
+whz/LABDATA/books_200M_uint32

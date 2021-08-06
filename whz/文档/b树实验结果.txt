@@ -1,0 +1,550 @@
+btree:
+14M：
+predict time:0.0010056495666503906
+Filename: E:/whz/BTREE/btree(1).py
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+    68    369.7 MiB    369.7 MiB           1       @profile
+    69                                             def predict(self, key):
+    70    369.7 MiB      0.0 MiB           1           start = time.time()
+    71    369.7 MiB      0.0 MiB           1           search_result = self.search(Item(key, 0))
+    72    369.7 MiB      0.0 MiB           1           a_node = self.nodes[search_result['fileIndex']]
+    73    369.7 MiB      0.0 MiB           1           if a_node.items[search_result['nodeIndex']] is None:
+    74                                                     end = time.time()
+    75                                                     print(f"predict time:{end - start}")
+    76                                                     return -1
+    77    369.7 MiB      0.0 MiB           1           end = time.time()
+    78    369.8 MiB      0.1 MiB           1           print(f"predict time:{end - start}")
+    79    369.8 MiB      0.0 MiB           1           return a_node.items[search_result['nodeIndex']].v
+
+38M：
+predict time:0.0010023117065429688
+Filename: E:/whz/BTREE/btree(1).py
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+    68    805.2 MiB    805.2 MiB           1       @profile
+    69                                             def predict(self, key):
+    70    805.2 MiB      0.0 MiB           1           start = time.time()
+    71    805.2 MiB      0.0 MiB           1           search_result = self.search(Item(key, 0))
+    72    805.2 MiB      0.0 MiB           1           a_node = self.nodes[search_result['fileIndex']]
+    73    805.2 MiB      0.0 MiB           1           if a_node.items[search_result['nodeIndex']] is None:
+    74                                                     end = time.time()
+    75                                                     print(f"predict time:{end - start}")
+    76                                                     return -1
+    77    805.2 MiB      0.0 MiB           1           end = time.time()
+    78    805.2 MiB      0.0 MiB           1           print(f"predict time:{end - start}")
+    79    805.2 MiB      0.0 MiB           1           return a_node.items[search_result['nodeIndex']].v
+
+84M：
+predict time:0.0009975433349609375
+Filename: E:/whz/BTREE/btree(1).py
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+    68   1637.1 MiB   1637.1 MiB           1       @profile
+    69                                             def predict(self, key):
+    70   1637.1 MiB      0.0 MiB           1           start = time.time()
+    71   1637.1 MiB      0.0 MiB           1           search_result = self.search(Item(key, 0))
+    72   1637.1 MiB      0.0 MiB           1           a_node = self.nodes[search_result['fileIndex']]
+    73   1637.1 MiB      0.0 MiB           1           if a_node.items[search_result['nodeIndex']] is None:
+    74                                                     end = time.time()
+    75                                                     print(f"predict time:{end - start}")
+    76                                                     return -1
+    77   1637.1 MiB      0.0 MiB           1           end = time.time()
+    78   1637.1 MiB      0.0 MiB           1           print(f"predict time:{end - start}")
+    79   1637.1 MiB      0.0 MiB           1           return a_node.items[search_result['nodeIndex']].v
+
+114M：
+predict time:0.0
+Filename: E:/whz/BTREE/btree(1).py
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+    68   2164.4 MiB   2164.4 MiB           1       @profile
+    69                                             def predict(self, key):
+    70   2164.5 MiB      0.0 MiB           1           start = time.time()
+    71   2164.5 MiB      0.0 MiB           1           search_result = self.search(Item(key, 0))
+    72   2164.5 MiB      0.0 MiB           1           a_node = self.nodes[search_result['fileIndex']]
+    73   2164.5 MiB      0.0 MiB           1           if a_node.items[search_result['nodeIndex']] is None:
+    74                                                     end = time.time()
+    75                                                     print(f"predict time:{end - start}")
+    76                                                     return -1
+    77   2164.5 MiB      0.0 MiB           1           end = time.time()
+    78   2164.5 MiB      0.1 MiB           1           print(f"predict time:{end - start}")
+    79   2164.5 MiB      0.0 MiB           1           return a_node.items[search_result['nodeIndex']].v
+280M:
+predict time:0.0009975433349609375
+Filename: E:/gauss_learned_index/btree.py
+
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+    68   5723.7 MiB   5723.7 MiB           1       @profile
+    69                                             def predict(self, key):
+    70   5723.7 MiB      0.0 MiB           1           start = time.time()
+    71   5723.7 MiB      0.0 MiB           1           search_result = self.search(Item(key, 0))
+    72   5723.7 MiB      0.0 MiB           1           a_node = self.nodes[search_result['fileIndex']]
+    73   5723.7 MiB      0.0 MiB           1           if a_node.items[search_result['nodeIndex']] is None:
+    74                                                     end = time.time()
+    75                                                     print(f"predict time:{end - start}")
+    76                                                     return -1
+    77   5723.7 MiB      0.0 MiB           1           end = time.time()
+    78   5723.7 MiB      0.0 MiB           1           print(f"predict time:{end - start}")
+    79   5723.7 MiB      0.0 MiB           1           return a_node.items[search_result['nodeIndex']].v
+
+1.2G:
+predict time:0.02426433563232422
+Filename: E:/gauss_learned_index/btree.py
+
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+    68   8065.8 MiB   8065.8 MiB           1       @profile
+    69                                             def predict(self, key):
+    70   8065.9 MiB      0.1 MiB           1           start = time.time()
+    71   8066.4 MiB      0.5 MiB           1           search_result = self.search(Item(key, 0))
+    72   8066.4 MiB      0.0 MiB           1           a_node = self.nodes[search_result['fileIndex']]
+    73   8066.4 MiB      0.0 MiB           1           if a_node.items[search_result['nodeIndex']] is None:
+    74                                                     end = time.time()
+    75                                                     print(f"predict time:{end - start}")
+    76                                                     return -1
+    77   8066.4 MiB      0.0 MiB           1           end = time.time()
+    78   8066.5 MiB      0.1 MiB           1           print(f"predict time:{end - start}")
+    79   8066.5 MiB      0.0 MiB           1           return a_node.items[search_result['nodeIndex']].v
+
+
+
+
+多项式：
+11.7M:
+average error:21.342321396543213%
+time:49.585498094558716s
+Search Time: 0.0009975433349609375
+Filename: E:/whz/BTREE/li.py
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+   108     90.3 MiB     90.3 MiB           1       @profile
+   109                                             def search(self, key):  # model biased search
+   110     90.3 MiB      0.0 MiB           1           start = time.time()
+   111     90.3 MiB      0.0 MiB           1           pos, model = self.predict(key)
+   112                                         
+   113     90.3 MiB      0.0 MiB           1           left = pos + self.error_bound[model][0]
+   114     90.3 MiB      0.0 MiB           1           right = pos + self.error_bound[model][1]
+   115                                         
+   116                                                 # 检测预测位置
+   117     90.3 MiB      0.0 MiB           1           if pos < 0:
+   118                                                     left = pos = 0
+   119     90.3 MiB      0.0 MiB           1           if pos > self.N - 1:
+   120                                                     right = pos = self.N - 1
+   121                                         
+   122     90.3 MiB      0.0 MiB           1           if left < 0:
+   123                                                     left = 0
+   124     90.3 MiB      0.0 MiB           1           if right > self.N - 1:
+   125     90.3 MiB      0.0 MiB           1               right = self.N - 1
+   126                                         
+   127                                                 # print(left,pos,right)
+   128                                         
+   129     90.3 MiB      0.0 MiB           2           while left <= right:
+   130                                         
+   131     90.3 MiB      0.0 MiB           1               if self.data[pos] == key:
+   132                                                         end = time.time()
+   133                                                         print(f"Search Time: {end - start}")
+   134                                                         return True
+   135     90.3 MiB      0.0 MiB           1               elif self.data[pos] > key:
+   136     90.3 MiB      0.0 MiB           1                   right = pos - 1
+   137                                                     elif self.data[pos] < key:
+   138                                                         left = pos + 1
+   139     90.3 MiB      0.0 MiB           1               pos = int((left + right) / 2)
+   140     90.3 MiB      0.0 MiB           1           end = time.time()
+   141     90.3 MiB      0.0 MiB           1           print(f"Search Time: {end - start}")
+   142     90.3 MiB      0.0 MiB           1           return False
+33.5M:
+average error:21.357346448614543%
+time:148.51251912117004s
+Search Time: 0.000997304916381836
+Filename: E:/whz/BTREE/li.py
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+   108    100.7 MiB    100.7 MiB           1       @profile
+   109                                             def search(self, key):  # model biased search
+   110    100.7 MiB      0.0 MiB           1           start = time.time()
+   111    100.7 MiB      0.0 MiB           1           pos, model = self.predict(key)
+   112                                         
+   113    100.7 MiB      0.0 MiB           1           left = pos + self.error_bound[model][0]
+   114    100.7 MiB      0.0 MiB           1           right = pos + self.error_bound[model][1]
+   115                                         
+   116                                                 # 检测预测位置
+   117    100.7 MiB      0.0 MiB           1           if pos < 0:
+   118                                                     left = pos = 0
+   119    100.7 MiB      0.0 MiB           1           if pos > self.N - 1:
+   120                                                     right = pos = self.N - 1
+   121                                         
+   122    100.7 MiB      0.0 MiB           1           if left < 0:
+   123                                                     left = 0
+   124    100.7 MiB      0.0 MiB           1           if right > self.N - 1:
+   125    100.7 MiB      0.0 MiB           1               right = self.N - 1
+   126                                         
+   127                                                 # print(left,pos,right)
+   128                                         
+   129    100.7 MiB      0.0 MiB           2           while left <= right:
+   130                                         
+   131    100.7 MiB      0.0 MiB           1               if self.data[pos] == key:
+   132                                                         end = time.time()
+   133                                                         print(f"Search Time: {end - start}")
+   134                                                         return True
+   135    100.7 MiB      0.0 MiB           1               elif self.data[pos] > key:
+   136    100.7 MiB      0.0 MiB           1                   right = pos - 1
+   137                                                     elif self.data[pos] < key:
+   138                                                         left = pos + 1
+   139    100.7 MiB      0.0 MiB           1               pos = int((left + right) / 2)
+   140    100.7 MiB      0.0 MiB           1           end = time.time()
+   141    100.7 MiB      0.0 MiB           1           print(f"Search Time: {end - start}")
+   142    100.7 MiB      0.0 MiB           1           return False
+
+106M:
+average error:21.35851816061868%
+time:447.3888957500458s
+Search Time: 0.001743316650390625
+Filename: E:/whz/BTREE/li.py
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+   108    132.6 MiB    132.6 MiB           1       @profile
+   109                                             def search(self, key):  # model biased search
+   110    132.6 MiB      0.0 MiB           1           start = time.time()
+   111    132.6 MiB      0.0 MiB           1           pos, model = self.predict(key)
+   112                                         
+   113    132.6 MiB      0.0 MiB           1           left = pos + self.error_bound[model][0]
+   114    132.6 MiB      0.0 MiB           1           right = pos + self.error_bound[model][1]
+   115                                         
+   116                                                 # 检测预测位置
+   117    132.6 MiB      0.0 MiB           1           if pos < 0:
+   118                                                     left = pos = 0
+   119    132.6 MiB      0.0 MiB           1           if pos > self.N - 1:
+   120                                                     right = pos = self.N - 1
+   121                                         
+   122    132.6 MiB      0.0 MiB           1           if left < 0:
+   123                                                     left = 0
+   124    132.6 MiB      0.0 MiB           1           if right > self.N - 1:
+   125    132.6 MiB      0.0 MiB           1               right = self.N - 1
+   126                                         
+   127                                                 # print(left,pos,right)
+   128                                         
+   129    132.6 MiB      0.0 MiB           2           while left <= right:
+   130                                         
+   131    132.6 MiB      0.0 MiB           1               if self.data[pos] == key:
+   132                                                         end = time.time()
+   133                                                         print(f"Search Time: {end - start}")
+   134                                                         return True
+   135    132.6 MiB      0.0 MiB           1               elif self.data[pos] > key:
+   136    132.6 MiB      0.0 MiB           1                   right = pos - 1
+   137                                                     elif self.data[pos] < key:
+   138                                                         left = pos + 1
+   139    132.6 MiB      0.0 MiB           1               pos = int((left + right) / 2)
+   140    132.6 MiB      0.0 MiB           1           end = time.time()
+   141    132.6 MiB      0.0 MiB           1           print(f"Search Time: {end - start}")
+   142    132.6 MiB      0.0 MiB           1           return False
+
+143M：
+average error:21.36483226446942%
+time:569.5483770370483s
+Search Time: 0.0010378360748291016
+Filename: E:/whz/BTREE/li.py
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+   108     64.8 MiB     64.8 MiB           1       @profile
+   109                                             def search(self, key):  # model biased search
+   110     64.8 MiB      0.0 MiB           1           start = time.time()
+   111     65.0 MiB      0.2 MiB           1           pos, model = self.predict(key)
+   112                                         
+   113     65.0 MiB      0.0 MiB           1           left = pos + self.error_bound[model][0]
+   114     65.0 MiB      0.0 MiB           1           right = pos + self.error_bound[model][1]
+   115                                         
+   116                                                 # 检测预测位置
+   117     65.0 MiB      0.0 MiB           1           if pos < 0:
+   118                                                     left = pos = 0
+   119     65.0 MiB      0.0 MiB           1           if pos > self.N - 1:
+   120                                                     right = pos = self.N - 1
+   121                                         
+   122     65.0 MiB      0.0 MiB           1           if left < 0:
+   123                                                     left = 0
+   124     65.0 MiB      0.0 MiB           1           if right > self.N - 1:
+   125     65.0 MiB      0.0 MiB           1               right = self.N - 1
+   126                                         
+   127                                                 # print(left,pos,right)
+   128                                         
+   129     65.0 MiB      0.0 MiB           2           while left <= right:
+   130                                         
+   131     65.0 MiB      0.0 MiB           1               if self.data[pos] == key:
+   132                                                         end = time.time()
+   133                                                         print(f"Search Time: {end - start}")
+   134                                                         return True
+   135     65.0 MiB      0.0 MiB           1               elif self.data[pos] > key:
+   136     65.0 MiB      0.0 MiB           1                   right = pos - 1
+   137                                                     elif self.data[pos] < key:
+   138                                                         left = pos + 1
+   139     65.0 MiB      0.0 MiB           1               pos = int((left + right) / 2)
+   140     65.0 MiB      0.0 MiB           1           end = time.time()
+   141     65.0 MiB      0.0 MiB           1           print(f"Search Time: {end - start}")
+   142     65.0 MiB      0.0 MiB           1           return False
+
+195M：
+average error:21.35034808446933%
+time:775.5673038959503s
+Search Time: 0.0009963512420654297
+Filename: E:/whz/BTREE/li.py
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+   108     30.4 MiB     30.4 MiB           1       @profile
+   109                                             def search(self, key):  # model biased search
+   110     30.4 MiB      0.0 MiB           1           start = time.time()
+   111     30.6 MiB      0.2 MiB           1           pos, model = self.predict(key)
+   112                                         
+   113     30.6 MiB      0.0 MiB           1           left = pos + self.error_bound[model][0]
+   114     30.6 MiB      0.0 MiB           1           right = pos + self.error_bound[model][1]
+   115                                         
+   116                                                 # 检测预测位置
+   117     30.6 MiB      0.0 MiB           1           if pos < 0:
+   118                                                     left = pos = 0
+   119     30.6 MiB      0.0 MiB           1           if pos > self.N - 1:
+   120                                                     right = pos = self.N - 1
+   121                                         
+   122     30.6 MiB      0.0 MiB           1           if left < 0:
+   123                                                     left = 0
+   124     30.6 MiB      0.0 MiB           1           if right > self.N - 1:
+   125     30.6 MiB      0.0 MiB           1               right = self.N - 1
+   126                                         
+   127                                                 # print(left,pos,right)
+   128                                         
+   129     30.7 MiB      0.0 MiB           2           while left <= right:
+   130                                         
+   131     30.7 MiB      0.0 MiB           1               if self.data[pos] == key:
+   132                                                         end = time.time()
+   133                                                         print(f"Search Time: {end - start}")
+   134                                                         return True
+   135     30.7 MiB      0.0 MiB           1               elif self.data[pos] > key:
+   136     30.7 MiB      0.0 MiB           1                   right = pos - 1
+   137                                                     elif self.data[pos] < key:
+   138                                                         left = pos + 1
+   139     30.7 MiB      0.0 MiB           1               pos = int((left + right) / 2)
+   140     30.7 MiB      0.0 MiB           1           end = time.time()
+   141     30.7 MiB      0.0 MiB           1           print(f"Search Time: {end - start}")
+   142     30.7 MiB      0.0 MiB           1           return False
+
+234M：
+average error:21.356964599258028%
+time:910.7230474948883s
+Search Time: 0.0019969940185546875
+Filename: E:/whz/BTREE/li.py
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+   108    129.5 MiB    129.5 MiB           1       @profile
+   109                                             def search(self, key):  # model biased search
+   110    129.5 MiB      0.0 MiB           1           start = time.time()
+   111    129.7 MiB      0.2 MiB           1           pos, model = self.predict(key)
+   112                                         
+   113    129.7 MiB      0.0 MiB           1           left = pos + self.error_bound[model][0]
+   114    129.7 MiB      0.0 MiB           1           right = pos + self.error_bound[model][1]
+   115                                         
+   116                                                 # 检测预测位置
+   117    129.7 MiB      0.0 MiB           1           if pos < 0:
+   118                                                     left = pos = 0
+   119    129.7 MiB      0.0 MiB           1           if pos > self.N - 1:
+   120                                                     right = pos = self.N - 1
+   121                                         
+   122    129.7 MiB      0.0 MiB           1           if left < 0:
+   123                                                     left = 0
+   124    129.7 MiB      0.0 MiB           1           if right > self.N - 1:
+   125    129.7 MiB      0.0 MiB           1               right = self.N - 1
+   126                                         
+   127                                                 # print(left,pos,right)
+   128                                         
+   129    129.7 MiB      0.0 MiB           2           while left <= right:
+   130                                         
+   131    129.7 MiB      0.0 MiB           1               if self.data[pos] == key:
+   132                                                         end = time.time()
+   133                                                         print(f"Search Time: {end - start}")
+   134                                                         return True
+   135    129.7 MiB      0.0 MiB           1               elif self.data[pos] > key:
+   136    129.7 MiB      0.0 MiB           1                   right = pos - 1
+   137                                                     elif self.data[pos] < key:
+   138                                                         left = pos + 1
+   139    129.7 MiB      0.0 MiB           1               pos = int((left + right) / 2)
+   140    129.7 MiB      0.0 MiB           1           end = time.time()
+   141    129.7 MiB      0.0 MiB           1           print(f"Search Time: {end - start}")
+   142    129.7 MiB      0.0 MiB           1           return False
+
+
+280M:
+average error:17.222104686329754%
+time:921.2449176311493s
+Search Time: 0.0011103153228759766
+Filename: E:/gauss_learned_index/li.py
+
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+   108    213.6 MiB    213.6 MiB           1       @profile
+   109                                             def search(self, key):  # model biased search
+   110    213.6 MiB      0.0 MiB           1           start = time.time()
+   111    213.6 MiB      0.0 MiB           1           pos, model = self.predict(key)
+   112                                         
+   113    213.6 MiB      0.0 MiB           1           left = pos + self.error_bound[model][0]
+   114    213.6 MiB      0.0 MiB           1           right = pos + self.error_bound[model][1]
+   115                                         
+   116                                                 # 检测预测位置
+   117    213.6 MiB      0.0 MiB           1           if pos < 0:
+   118                                                     left = pos = 0
+   119    213.6 MiB      0.0 MiB           1           if pos > self.N - 1:
+   120                                                     right = pos = self.N - 1
+   121                                         
+   122    213.6 MiB      0.0 MiB           1           if left < 0:
+   123                                                     left = 0
+   124    213.6 MiB      0.0 MiB           1           if right > self.N - 1:
+   125    213.6 MiB      0.0 MiB           1               right = self.N - 1
+   126                                         
+   127                                                 # print(left,pos,right)
+   128                                         
+   129    213.6 MiB      0.0 MiB           2           while left <= right:
+   130                                         
+   131    213.6 MiB      0.0 MiB           1               if self.data[pos] == key:
+   132                                                         end = time.time()
+   133                                                         print(f"Search Time: {end - start}")
+   134                                                         return True
+   135    213.6 MiB      0.0 MiB           1               elif self.data[pos] > key:
+   136    213.6 MiB      0.0 MiB           1                   right = pos - 1
+   137                                                     elif self.data[pos] < key:
+   138                                                         left = pos + 1
+   139    213.6 MiB      0.0 MiB           1               pos = int((left + right) / 2)
+   140    213.6 MiB      0.0 MiB           1           end = time.time()
+   141    213.6 MiB      0.0 MiB           1           print(f"Search Time: {end - start}")
+   142    213.6 MiB      0.0 MiB           1           return False
+
+359M：
+average error:15.610063218469442%
+time:1256.0921058654785s
+Search Time: 0.000997781753540039
+Filename: E:/gauss_learned_index/li.py
+
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+   108    251.5 MiB    251.5 MiB           1       @profile
+   109                                             def search(self, key):  # model biased search
+   110    251.5 MiB      0.0 MiB           1           start = time.time()
+   111    251.5 MiB      0.0 MiB           1           pos, model = self.predict(key)
+   112                                         
+   113    251.5 MiB      0.0 MiB           1           left = pos + self.error_bound[model][0]
+   114    251.5 MiB      0.0 MiB           1           right = pos + self.error_bound[model][1]
+   115                                         
+   116                                                 # 检测预测位置
+   117    251.5 MiB      0.0 MiB           1           if pos < 0:
+   118                                                     left = pos = 0
+   119    251.5 MiB      0.0 MiB           1           if pos > self.N - 1:
+   120                                                     right = pos = self.N - 1
+   121                                         
+   122    251.5 MiB      0.0 MiB           1           if left < 0:
+   123                                                     left = 0
+   124    251.5 MiB      0.0 MiB           1           if right > self.N - 1:
+   125                                                     right = self.N - 1
+   126                                         
+   127                                                 # print(left,pos,right)
+   128                                         
+   129    251.5 MiB      0.0 MiB           2           while left <= right:
+   130                                         
+   131    251.5 MiB      0.0 MiB           1               if self.data[pos] == key:
+   132                                                         end = time.time()
+   133                                                         print(f"Search Time: {end - start}")
+   134                                                         return True
+   135    251.5 MiB      0.0 MiB           1               elif self.data[pos] > key:
+   136    251.5 MiB      0.0 MiB           1                   right = pos - 1
+   137                                                     elif self.data[pos] < key:
+   138                                                         left = pos + 1
+   139    251.5 MiB      0.0 MiB           1               pos = int((left + right) / 2)
+   140    251.5 MiB      0.0 MiB           1           end = time.time()
+   141    251.5 MiB      0.0 MiB           1           print(f"Search Time: {end - start}")
+   142    251.5 MiB      0.0 MiB           1           return False
+
+Process finished with exit code 0
+
+1.2G:
+average error:15.611368382586798%
+time:4157.052222967148s
+Search Time: 0.018944501876831055
+Filename: E:/gauss_learned_index/li.py
+
+Line #    Mem usage    Increment  Occurences   Line Contents
+============================================================
+   108     20.2 MiB     20.2 MiB           1       @profile
+   109                                             def search(self, key):  # model biased search
+   110     20.2 MiB      0.0 MiB           1           start = time.time()
+   111     21.6 MiB      1.3 MiB           1           pos, model = self.predict(key)
+   112                                         
+   113     21.6 MiB      0.0 MiB           1           left = pos + self.error_bound[model][0]
+   114     21.6 MiB      0.0 MiB           1           right = pos + self.error_bound[model][1]
+   115                                         
+   116                                                 # 检测预测位置
+   117     21.6 MiB      0.0 MiB           1           if pos < 0:
+   118                                                     left = pos = 0
+   119     21.6 MiB      0.0 MiB           1           if pos > self.N - 1:
+   120                                                     right = pos = self.N - 1
+   121                                         
+   122     21.6 MiB      0.0 MiB           1           if left < 0:
+   123                                                     left = 0
+   124     21.6 MiB      0.0 MiB           1           if right > self.N - 1:
+   125                                                     right = self.N - 1
+   126                                         
+   127                                                 # print(left,pos,right)
+   128                                         
+   129     21.6 MiB      0.0 MiB           2           while left <= right:
+   130                                         
+   131     21.6 MiB      0.0 MiB           1               if self.data[pos] == key:
+   132                                                         end = time.time()
+   133                                                         print(f"Search Time: {end - start}")
+   134                                                         return True
+   135     21.6 MiB      0.0 MiB           1               elif self.data[pos] > key:
+   136     21.6 MiB      0.0 MiB           1                   right = pos - 1
+   137                                                     elif self.data[pos] < key:
+   138                                                         left = pos + 1
+   139     21.6 MiB      0.0 MiB           1               pos = int((left + right) / 2)
+   140     21.6 MiB      0.0 MiB           1           end = time.time()
+   141     21.6 MiB      0.0 MiB           1           print(f"Search Time: {end - start}")
+   142     21.6 MiB      0.0 MiB           1           return False
+
+kraska:
+avg-log2-loss
+384M-4.28   0.999572
+192M-4.473  0.9995527
+96M-4.714   0.9995286
+24M-5.349   0.9994651
+12M-5.769   0.9994231
+6M-6.287    0.9993713
+计算方案：
+
+1-avg-log2-loss*0.0001
+
+
+kraska_x = np.array([
+    6,
+    12,
+    24,
+    96,
+    192,
+    384
+])
+
+kraska_y = np.array([
+    0.99937,
+    0.99942,
+    0.99946,
+    0.99952,
+    0.99955,
+    0.99957
+])
+
+multi_x = np.array([
+    11.7,
+    33.5,
+    106,
+    208
+])
+multi_y = np.array([
+    0.9995584,
+    0.9995583,
+    0.9995583,
+    0.9995893
+])
+

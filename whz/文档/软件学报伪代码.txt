@@ -1,0 +1,33 @@
+Input: origin array of key X, origin array of position y
+Output: predict index in the array of related field
+Initialize: mode = "train", readoverflag = false;
+if mode == "train" :
+    // cut data and do redistribution, add a column to x1 to set new label
+    while(!readoverflag) : 
+        x1,y1 = pre_process(X,y);
+        for i in range (0,modellist.size) : 
+            // adopt model i to train data, i is the index of modellist
+            model = train(x1,y1,i,"train");
+            score[i] = model.getscore();
+        sort(score);
+        // Use some stratrgy to optimize and choose the most suitable model
+        label = score.index(strategy(score));
+        // set the new label of X with the number of model
+        addlabel(x1,label)
+        // return true if we have trained all inputed data
+        readoverflag = continueread(X,y);
+    // end training and switch mode to query
+    mode = "query"
+else if mode == "query" :
+    label = labelparse(X);
+    // use model with the index equals to label to query position
+    index = query(X,label);
+Scalability: use a classfier or other methods to process data from the same source
+if mode == "train" :
+    // Use strategy to classfy data, change method to tag X .etc
+    OtherStrategytoTag(X, y)
+if mode == "query" :
+    // Input : tagged X
+    // Use a classfier (recommand randomforest)
+    // to approve prediction to the choice of model whose input data from same datasource
+    classfier(X)
