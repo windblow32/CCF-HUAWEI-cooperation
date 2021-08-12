@@ -54,7 +54,8 @@ X_train, X_test, z_train, z_test = train_test_split(X, z, test_size=0.20)
 
 # 按道理，X_train和X1_train,以及X_test和X1_test应该相同
 # fixme
-
+assert X_train == X1_train
+assert X_test == X1_test
 # 调参
 # n_estimators=100, *, criterion='mse',
 # max_depth=None, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0,
