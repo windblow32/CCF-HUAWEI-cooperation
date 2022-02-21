@@ -58,7 +58,7 @@ multi_y = np.array([
 #     0.9996325
 #
 # ])
-# old kraska:
+# old kraska,multi:
 # plt.annotate('(200, 0.99842)', xy=(200, 0.99842), xytext=(200, 0.99842))
 # plt.annotate('(350, 0.99853)', xy=(350, 0.99853), xytext=(450, 0.99853))
 # plt.annotate('(762, 0.999545)', xy=(762, 0.999545), xytext=(772, 0.999545))
@@ -66,7 +66,7 @@ multi_y = np.array([
 # plt.annotate('(1945, 0.999617)', xy=(1945, 0.999617), xytext=(1745, 0.999433))
 # plt.annotate('(7, 12)', xy=(7, 12), xytext=(7, 12))
 
-# new kraska:
+# new kraska,multi:
 # plt.annotate('(6,0.99937)', xy=(6, 0.99937), xytext=(6, 0.99937))
 # plt.annotate('(12, 0.99942)', xy=(12, 0.99942), xytext=(12, 0.99942))
 
@@ -96,7 +96,7 @@ plt.xlabel("size/Mb")
 plt.ylabel("currency/us")
 kraska_x_smooth = np.linspace(kraska_x.min(), kraska_x.max(), 300)
 kraska_y_smooth = make_interp_spline(kraska_x, kraska_y)(kraska_x_smooth)
-plt.plot(kraska_x_smooth, kraska_y_smooth, label='kraska')
+plt.plot(kraska_x_smooth, kraska_y_smooth, label='kraska,multi')
 plt.plot(kraska_x, kraska_y, 'om')
 
 plt.xlim(xmin=0, xmax=400)
@@ -108,5 +108,5 @@ multi_y_smooth = make_interp_spline(multi_x, multi_y)(multi_x_smooth)
 plt.plot(multi_x_smooth, multi_y_smooth, label='multi', color='orange')
 plt.plot(multi_x, multi_y, 'or')
 plt.legend()
-plt.savefig("E:/draw_picture/kraska,btree,multi/currency.png")
+plt.savefig("E:/draw_picture/kraska,multi,btree,multi/currency.png")
 plt.show()

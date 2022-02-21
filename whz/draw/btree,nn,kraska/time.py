@@ -59,7 +59,7 @@ multi_y = np.array([
     1110.3
 ])
 
-# kraska
+# kraska,multi
 plt.annotate('(10, 970)', xy=(10, 970), xytext=(2, 930))
 plt.annotate('(100, 728)', xy=(100, 728), xytext=(100, 728))
 plt.annotate('(200, 1221)', xy=(200, 1221), xytext=(200, 1221))
@@ -87,13 +87,13 @@ plt.annotate('(280, 1110.3)', xy=(280, 1110.3), xytext=(280, 1110.3))
 
 plt.xlabel("size/Mb")
 plt.ylabel("time/us")
-# kraska
+# kraska,multi
 kraska_x_smooth = np.linspace(kraska_x.min(), kraska_x.max(), 300)
 kraska_y_smooth = make_interp_spline(kraska_x, kraska_y)(kraska_x_smooth)
-plt.plot(kraska_x_smooth, kraska_y_smooth, label='kraska')
+plt.plot(kraska_x_smooth, kraska_y_smooth, label='kraska,multi')
 plt.plot(kraska_x, kraska_y, 'om')
 
-# plt.plot(kraska_x, kraska_y, label='kraska')
+# plt.plot(kraska_x, kraska_y, label='kraska,multi')
 # plt.plot(kraska_x, kraska_y, 'om')
 
 # btree
@@ -121,5 +121,5 @@ plt.xlim(xmin=0,xmax=400)
 plt.ylim(ymin=0,ymax=2000)
 
 plt.legend()
-plt.savefig("E:/draw_picture/kraska,btree,multi/time.png")
+plt.savefig("E:/draw_picture/kraska,multi,btree,multi/time.png")
 plt.show()

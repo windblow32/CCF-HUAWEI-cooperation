@@ -1,4 +1,6 @@
 # 数据集
+import time
+
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 # 评估
@@ -70,9 +72,20 @@ class gbr:
     def getdataset(self):
         X_train, X_test, y_train, y_test = train_test_split(self.X, self.y, test_size=0.20, random_state=1)
         print(X_train)
+
     @classmethod
     def test(self, testSet):
         gbr = joblib.load(r'E:\whz\new_index_learning\software_newspaper\trainedModel\gbr.pkl')
         test_predict = gbr.predict(testSet)
         # print(test_predict)
         return test_predict
+
+    @classmethod
+    def testWithTime(self, testSet):
+        start = time.time_ns()
+        etr = joblib.load(r'E:\whz\new_index_learning\software_newspaper\trainedModel\gbr.pkl')
+        end = time.time_ns()
+        ioTime = end - start
+        test_predict = etr.predict(testSet)
+        # print(test_predict)
+        return ioTime, test_predict

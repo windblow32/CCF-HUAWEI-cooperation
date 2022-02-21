@@ -76,7 +76,7 @@ kraska_x_smooth = np.linspace(kraska_x.min(),kraska_x.max(),300)
 
 
 kraska_y_smooth = make_interp_spline(kraska_x,kraska_y)(kraska_x_smooth)
-plt.plot(kraska_x_smooth, kraska_y_smooth, label='kraska')
+plt.plot(kraska_x_smooth, kraska_y_smooth, label='kraska,multi')
 
 auto_x_smooth = np.linspace(auto_x.min(),auto_x.max(),300)
 

@@ -1,3 +1,5 @@
+import time
+
 from matplotlib import pyplot as plt
 from sklearn.model_selection import cross_val_score
 from sklearn.ensemble import RandomForestRegressor
@@ -88,6 +90,16 @@ class rf:
         test_predict = rf.predict(testSet)
         # print(test_predict)
         return test_predict
+
+    @classmethod
+    def testWithTime(self, testSet):
+        start = time.time_ns()
+        etr = joblib.load(r'E:\whz\new_index_learning\software_newspaper\trainedModel\rf.pkl')
+        end = time.time_ns()
+        ioTime = end - start
+        test_predict = etr.predict(testSet)
+        # print(test_predict)
+        return ioTime, test_predict
 
 
 

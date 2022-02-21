@@ -51,7 +51,7 @@ class ModelMark:
         self.X = X
         self.y = y
 
-    def train(self):
+    def train(self, read_line, size):
         np.shape(self.X)
         # load 后加一列-1,作为初始化
         # np.insert(X, 0, -1, axis=1)
@@ -59,14 +59,15 @@ class ModelMark:
 
         # size为z的大小
         self.size = 0
-        print(self.y)
+
         j = 0
         temp = 0
-        # 一次读取几行
-        read_line = 100
+        # fixme : 一次读取几行, also is strike
+        # read_line = 100
 
         res = ['', '', '', '', '', '', '', '', '']
-        for seed in range(10, 50, 5):
+        # size是X的大小,例如100000,每read_line处理一次
+        for seed in range(10, 10 + size, read_line):
             if temp + read_line <= self.X.shape[0]:
                 # x = X[temp:temp + read_line, 1:]
                 x = self.X[temp:temp + read_line]
@@ -120,16 +121,16 @@ class ModelMark:
             min_index = score.index(mininum)
             mark = 0
             markedIndex = [-1 for x in range(0, 9)]
-            # fixme:error阈值控制在0.2
+            # fixme:error阈值控制在2
             for k in score:
-                if (k - mininum) <= 0.2:
+                if (k - mininum) <= 2:
                     index = score.index(k)
                     markedIndex[mark] = int(index)
                     res[int(index)] = name[index]
                     mark += 1
             for i in range(temp - read_line, temp):
                 marked = int(random.randint(0, mark - 1))
-                self.X[i][0] = markedIndex[int(marked)]
+                # self.X[i][0] = markedIndex[int(marked)]
                 self.z.append(markedIndex[int(marked)])
 
             self.size += read_line
@@ -140,7 +141,7 @@ class ModelMark:
             print("一共推荐以下模型")
             t = 0
             for t in range(9):
-                if (res[t] != ''):
+                if res[t] != '':
                     print(res[t], end='; ')
             print('')
 

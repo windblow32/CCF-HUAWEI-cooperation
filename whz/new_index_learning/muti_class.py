@@ -1,4 +1,6 @@
 # 数据集
+import time
+
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 # 评估
@@ -77,21 +79,12 @@ class muti_reg:
         # print(test_predict)
         return test_predict
 
-# # Plot the results
-# plt.figure()
-# s = 25
-# plt.scatter(y[:, 0], y[:, 1], c="navy", s=s,
-#             edgecolor="black", label="data")
-# plt.scatter(y_pred[:, 0], y_pred[:, 1], c="cornflowerblue", s=s,
-#             edgecolor="black", label="max_depth=2")
-# plt.scatter(y_2[:, 0], y_2[:, 1], c="red", s=s,
-#             edgecolor="black", label="max_depth=5")
-# # plt.scatter(y_3[:, 0], y_3[:, 1], c="orange", s=s,
-# #             edgecolor="black", label="max_depth=8")
-# plt.xlim([-6, 6])
-# plt.ylim([-6, 6])
-# plt.xlabel("target 1")
-# plt.ylabel("target 2")
-# plt.title("Multi-output Decision Tree Regression")
-# plt.legend(loc="best")
-# plt.show()
+    @classmethod
+    def testWithTime(self, testSet):
+        start = time.time_ns()
+        etr = joblib.load(r'E:\whz\new_index_learning\software_newspaper\trainedModel\regr_1.pkl')
+        end = time.time_ns()
+        ioTime = end - start
+        test_predict = etr.predict(testSet)
+        # print(test_predict)
+        return ioTime, test_predict

@@ -1,5 +1,7 @@
 
 # 数据集
+import time
+
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 # 评估
@@ -9,12 +11,15 @@ from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import explained_variance_score
 from sklearn.metrics import r2_score
 from sklearn import metrics
+from sklearn.ensemble import BaggingRegressor
 
 import numpy as np
 from sklearn.ensemble import ExtraTreesRegressor
 
 from score_config import config
 import joblib
+
+
 
 class etr:
     def __init__(self, X, y, seed):
@@ -76,10 +81,24 @@ class etr:
         print(X_train)
 
     @classmethod
+    def testWithTime(self, testSet):
+        start = time.time_ns()
+        etr = joblib.load(r'E:\whz\new_index_learning\software_newspaper\trainedModel\etr.pkl')
+        end = time.time_ns()
+        ioTime = end - start
+        test_predict = etr.predict(testSet)
+        # print(test_predict)
+        return ioTime, test_predict
+
+    @classmethod
     def test(self, testSet):
         etr = joblib.load(r'E:\whz\new_index_learning\software_newspaper\trainedModel\etr.pkl')
         test_predict = etr.predict(testSet)
         # print(test_predict)
         return test_predict
+
+
+
+
 
 

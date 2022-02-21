@@ -98,7 +98,7 @@ plt.xlabel("size/Mb")
 plt.ylabel("memory usage/Mb")
 # plt.annotate('only use linear combination', xy=(350, 241.6), xytext=(500, 241.6), arrowprops=dict(arrowstyle='->'))
 
-# kraska
+# kraska,multi
 # plt.annotate('(18, 382)', xy=(18, 382), xytext=(0, 1002),arrowprops=dict(arrowstyle='->'))
 plt.annotate('(34, 382.6)', xy=(34, 382.6), xytext=(10, 412.6))
 # plt.annotate('(75, 383.4)', xy=(75, 383.4), xytext=(55, 413.4))
@@ -127,10 +127,10 @@ plt.annotate('(200, 30.6)', xy=(200, 30.6), xytext=(175, -100))
 # plt.annotate('(234, 129.7)', xy=(234, 129.7), xytext=(234, -100))
 plt.annotate('(280, 213.6)', xy=(280, 213.6), xytext=(265, 0))
 
-# kraska
+# kraska,multi
 kraska_x_smooth = np.linspace(kraska_x.min(), kraska_x.max(), 300)
 kraksa_y_smooth = make_interp_spline(kraska_x, kraska_y)(kraska_x_smooth)
-plt.plot(kraska_x_smooth, kraksa_y_smooth, label='kraska')
+plt.plot(kraska_x_smooth, kraksa_y_smooth, label='kraska,multi')
 plt.plot(kraska_x, kraska_y, 'om')
 
 # btree
@@ -148,5 +148,5 @@ plt.plot(multi_x, multi_y, 'or')
 plt.legend()
 
 plt.xlim(xmin=0, xmax=300)
-plt.savefig("E:/draw_picture/kraska,btree,multi/memory.png")
+plt.savefig("E:/draw_picture/kraska,multi,btree,multi/memory.png")
 plt.show()

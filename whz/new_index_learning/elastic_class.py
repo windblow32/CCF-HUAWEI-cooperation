@@ -1,4 +1,6 @@
 # 数据集
+import time
+
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 
@@ -74,3 +76,13 @@ class elastic_reg:
         test_predict = elastic.predict(testSet)
         # print(test_predict)
         return test_predict
+
+    @classmethod
+    def testWithTime(self, testSet):
+        start = time.time_ns()
+        etr = joblib.load(r'E:\whz\new_index_learning\software_newspaper\trainedModel\elastic.pkl.pkl')
+        end = time.time_ns()
+        ioTime = end - start
+        test_predict = etr.predict(testSet)
+        # print(test_predict)
+        return ioTime, test_predict
